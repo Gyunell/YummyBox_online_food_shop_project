@@ -147,6 +147,21 @@ header {
   max-width: 1330px;
   gap: 40px;
 }
+.link {
+    text-decoration: none; 
+    color: inherit;      
+    transition: 0.3s;
+}
+
+.link:hover p {
+    color: #C04B50;        
+    transform: translateX(5px); 
+}
+
+.ink p {
+    margin: 0; 
+    transition: 0.3s;
+}
 .contact_info {
   flex: 1;
   margin-left: 30px;
@@ -325,6 +340,7 @@ header {
     border-radius: 15px;
     transition: .3s;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .end-text {
     text-align: center;
@@ -437,3 +453,30 @@ header {
 }
 }
 
+@media (min-width: 1025px) {
+    
+    header {
+        padding: 20px; 
+    }
+
+    #contact {
+        margin-bottom: 0 !important;
+        padding-bottom: 20px; 
+    }
+    .contact_container {
+        display: flex;
+        justify-content: center; 
+        align-items: flex-start;   
+        margin-left: 75px;    
+        gap: 200px;   
+    }
+
+    .contact_info {
+        margin-left: 0 !important;
+        flex: 1;
+    }
+
+    .contact-form {
+        flex: 1;
+    }
+}

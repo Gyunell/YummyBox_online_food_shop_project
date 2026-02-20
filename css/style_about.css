@@ -346,6 +346,7 @@ header {
     border-radius: 15px;
     transition: .3s;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .end-text {
     text-align: center;
@@ -463,4 +464,44 @@ header {
   text-align: center;
   padding: 0 20px;
 }
+}
+
+@media (min-width: 1025px) {
+    
+    header {
+        padding: 20px; 
+    }
+
+    #contact {
+        margin-bottom: 0 !important;
+        padding-bottom: 20px; 
+    }
+    .home {
+        padding-top: 30px !important;
+        padding-bottom: 40px !important;
+    }
+    .our-story {
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+    }
+    .our-team-text {
+        margin-bottom: 40px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .team_container {
+        display: flex;
+        justify-content: center;        
+        max-width: 1200px;
+        margin: 0 auto !important;
+        padding-bottom: 30px;
+    }
+
+    /* 3. Фиксируем ширину карточки, чтобы текст не растягивался */
+    .team_member {
+        flex: 0 1 300px;         /* Карточки будут одинаковой ширины */
+        text-align: center;
+    }
 }
