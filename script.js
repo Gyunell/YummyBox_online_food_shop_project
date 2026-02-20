@@ -1,8 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("Скрипт загружен и видит страницу!");
-
-    // === 1. МОБИЛЬНОЕ МЕНЮ ===
-    const menuIcon = document.getElementById('menu-icon');
+  const menuIcon = document.getElementById('menu-icon');
     const navbar = document.getElementById('navbar');
 
     if (menuIcon && navbar) {
@@ -12,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // === 2. ФОРМА КОНТАКТОВ (с проверкой на наличие) ===
     var form = document.getElementById("my-form");
     
     if (form) {
@@ -36,10 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // === 3. ЛОГИКА КОРЗИНЫ ===
     let cart = JSON.parse(localStorage.getItem('yummy_cart')) || [];
 
-    // Добавление товара
     document.addEventListener('click', function (e) {
         if (e.target && e.target.classList.contains('buy-button')) {
             const name = e.target.getAttribute('data-name');
@@ -84,13 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
         totalElement.innerText = total.toFixed(2);
     }
 
-    // Удаление товара (делаем функцию глобальной для onclick)
     window.removeItem = function(index) {
         cart.splice(index, 1);
         updateCart();
     }
 
-    // Открытие/Закрытие
     const cartIcon = document.querySelector('#cart-icon'); 
     const cartSidebar = document.getElementById('cart-sidebar');
     const closeCart = document.querySelector('.close-cart');
@@ -108,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Заказ в WhatsApp
     const checkoutBtn = document.querySelector('.checkout-btn');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', function() {
@@ -120,6 +110,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Запуск при загрузке
     renderCart();
-});
